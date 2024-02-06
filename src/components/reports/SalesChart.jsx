@@ -113,7 +113,7 @@ function SalesChart() {
 	return (
 		<ResponsiveContainer width="100%" height="100%">
 			<BarChart width={450} height={60} data={data}>
-				<Bar dataKey="uv" fill="#E7FCFF" />
+				<Bar dataKey="uv" fill="#1953be" />
 				<Tooltip />
 				<XAxis dataKey={"name"} width={"20px"} />
 				<YAxis />
