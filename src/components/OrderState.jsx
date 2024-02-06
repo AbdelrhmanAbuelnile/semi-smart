@@ -1,11 +1,11 @@
 function OrderState({state}) {
 
   const stateColor = {
-    "pending": "text-yellow-300 border border-yellow-300 ",
-    "processing": "text-blue-300 border border-blue-300",
-    "shipped": "text-green-300 border border-green-300",
-    "delivered": "text-green-600 border border-green-600",
-    "cancelled": "text-red-300 border border-red-300",
+    "pending": "bg-yellow-300 border border-yellow-300 ",
+    "processing": "bg-blue-300 border border-blue-300",
+    "shipped": "bg-green-300 border border-green-300",
+    "delivered": "bg-green-600 border border-green-600",
+    "cancelled": "bg-red-300 border border-red-300",
   }
 
   return (

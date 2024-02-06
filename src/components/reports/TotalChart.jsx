@@ -1,36 +1,15 @@
 import AreaChar from "./AreaChar";
 import { FaArrowTrendDown, FaArrowTrendUp } from "react-icons/fa6";
 
-function TotalChart({ data, overallResult, percentage, text }) {
+function TotalChart({ data, text }) {
   return (
-    <div className="w-full bg-secondaryback rounded-[20px] py-3 pl-6 text-center flex flex-col justify-center items-start gap-4 h-[160px] lg:h-[174px]">
+    <div className="w-full bg-secondary rounded-[10px] py-3 pl-3 text-center flex flex-col justify-center items-start gap-4 h-[300px] lg:h-[435px]">
 				<h2 className="text-xl font-bold text-ChartGray capitalize">{text}</h2>
 				<div className="w-full h-full">
 					<AreaChar
 						data={data}
 						className="w-full"
-						fill={overallResult ? "#15cab85e" : "#FB3B3A44"}
-						stroke={overallResult ? "#15CAB8" : "#f10000"}
 					/>
-				</div>
-				<div className="flex flex-row justify-start items-center gap-2">
-					{overallResult ? (
-						<FaArrowTrendUp className="text-green-500 text-sm" />
-					) : (
-						<FaArrowTrendDown className="text-red-500 text-sm" />
-					)}
-					<p className="text-darkerGray text-sm font-normal">
-						{" "}
-						<span
-							className={`${
-								overallResult ? "text-green-500" : "text-red-500"
-							} ' ' font-semibold`}
-						>
-							{overallResult ? " " : "-"}
-							{percentage}%
-						</span>{" "}
-						vc yesterday{" "}
-					</p>
 				</div>
 			</div>
   )

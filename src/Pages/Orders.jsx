@@ -28,11 +28,11 @@ function Orders() {
 					placeholder="Search by fridge model, customer name, customer id, or location"
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
-					className="w-full lg:w-4/12 p-2 mb-4 border border-secondary rounded-md focus:outline-none focus:border-primary bg-transparent text-secondary"
+					className="w-full lg:w-4/12 p-2 mb-4 border border-LightBlue rounded-md focus:outline-none focus:border-LightBlue bg-transparent text-secondary"
 				/>
 			</div>
 			<div className="w-full rounded-md">
-				<div className="flex flex-row font-semibold bg-secondary text-darkGray rounded-t-md">
+				<div className="flex flex-row font-semibold bg-secondary text-LightBlue rounded-t-md">
 					<div className="w-1/6 p-2 text-center">Order ID</div>
 					<div className="w-1/6 p-2 text-center">Customer Name</div>
 					<div className="w-1/6 p-2 text-center">Product</div>
@@ -46,7 +46,7 @@ function Orders() {
 					<Link
 						to={`/order/${order.id}`}
 						key={order.id}
-						className="flex flex-row border border-gray-400 items-center text-gray-400 hover:bg-gray-100 w-full hover:rounded-md duration-300 hover:text-secondaryback"
+						className="flex flex-row border border-LightBlue/40 items-center text-gray-700 hover:bg-gray-100 w-full hover:rounded-md duration-300 hover:text-secondary"
 					>
 						<div className="w-1/6 p-2 text-center">{order.id}</div>
 						<div className="w-1/6 p-2 text-center">{order.customerName}</div>

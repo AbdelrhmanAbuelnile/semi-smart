@@ -1,34 +1,51 @@
 import { useEffect, useState } from 'react';
-import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
-const data01 = [
-  { name: '2022', value: 400 },
-];
-
-const data02 = [
-  { name: '2023', value: 60 },
-];
 
 function ProfitChart() {
-  let [width, setWidth] = useState(400)
-  let [height, setHeight] = useState(400)
-  let innerRadius, outerRadius
-  useEffect(()=>{
-    
-    if(window.innerWidth < 550){
-      setWidth(200)
-      setHeight(200)
-    }
-  },[])
+  const data = [
+    {
+      subject: 'Malfunction',
+      A: 120,
+      B: 110,
+    },
+    {
+      subject: 'Profits',
+      A: 98,
+      B: 130,
+    },
+    {
+      subject: 'Losses',
+      A: 86,
+      B: 130,
+    },
+    {
+      subject: 'New Stores',
+      A: 99,
+      B: 100,
+    },
+    {
+      subject: 'Stores Closed',
+      A: 85,
+      B: 90,
+    },
+    {
+      subject: 'Production',
+      A: 65,
+      B: 85,
+    },
+  ];
   return (
-    <div className="bg-secondaryback rounded-[20px] p-4 h-[435px] w-full text-center">
-      <ResponsiveContainer width="100%" height="100%">
-        <PieChart width={width} height={height}>
-          <Pie dataKey="value" startAngle={90} endAngle={403.2} data={data02} cx="50%" cy="53%" innerRadius={40} outerRadius={75} fill="#8D8D99" />
-          <Pie dataKey="value" startAngle={90} endAngle={324} data={data01} cx="50%" cy="50%" innerRadius={40} outerRadius={80} fill="#C4DEFF" />
-          <Tooltip />
+    <div className="bg-secondary rounded-[20px] p-4 h-[435px] w-full text-center">
+<ResponsiveContainer width="100%" height="100%">
+        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+          <PolarGrid />
+          <PolarAngleAxis dataKey="subject" />
+          <PolarRadiusAxis angle={30} />
+          <Radar name="2023" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+          <Radar name="2024" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
           <Legend />
-        </PieChart>
+        </RadarChart>
       </ResponsiveContainer>
     </div>
   )

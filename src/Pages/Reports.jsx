@@ -11,7 +11,7 @@ import ProfitChart from "../components/reports/ProfitChart";
 
 function Reports() {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center gap-4">
+<div className="w-full h-full flex flex-col justify-center items-center gap-4">
 			<div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4">
 				<TotalChart data={data1} overallResult={overallResult1} percentage={percentage1} text={"active users"} />
 
@@ -20,13 +20,13 @@ function Reports() {
 				<TotalChart data={data3} overallResult={overallResult3} percentage={percentage3} text={"total profits"} />
 			</div>
 
-			<div className="w-full flex flex-col lg:flex-row justify-center items-start gap-4">
+			<div className="w-full flex flex-col  justify-center items-start gap-4">
 				<div className="w-full flex flex-col justify-center items-start gap-4">
 					<SalesChartComp />
 					
 				</div>
 				
-				<div className="w-full lg:w-1/3 flex flex-col justify-center items-start gap-4">
+				<div className="w-full flex flex-col lg:flex-row justify-center items-start gap-4">
 					<StaticChart data={statics}/>
 					<ProfitChart />
 				</div>

@@ -11,8 +11,8 @@ function CustomerPage() {
   }
 
   return (
-    <div className="text-primary mt-40">
-      <h1 className="text-2xl font-semibold mb-4 border-b border-secondary">{customer.customerName}</h1>
+    <div className="text-secondary mt-40">
+      <h1 className="text-2xl font-semibold mb-4 border-b border-LightBlue">{customer.customerName}</h1>
       <div className="grid grid-cols-2 gap-4">
         <div>
           <h2 className="text-lg font-semibold mb-2">Contact Information</h2>

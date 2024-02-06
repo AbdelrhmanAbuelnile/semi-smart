@@ -7,13 +7,13 @@ import { FaPeopleCarry } from "react-icons/fa";
 function SideNav() {
 	return (
 		<>
-			<div className="w-full max-w-[133px] h-full max-h-[500px] py-10 flex flex-col justify-center items-center gap-32 bg-nav z-20 rounded-[20px] fixed inset-0 top-2/4 left-6 -translate-y-[40%]">
+			<div className="w-full max-w-[133px] h-full max-h-[500px] py-10 flex flex-col justify-center items-center gap-32 bg-secondary z-20 rounded-[20px] fixed inset-0 top-2/4 left-6 -translate-y-[40%]">
       <NavLink
 					to={"/"}
 					className="
           rounded-xl p-1.5 md:p-3 text-base md:text-xl active:bg-primary
           font-semibold text-white hover:bg-primary
-          hover:text-white duration-300 flex flex-col justify-center items-center gap-2
+          hover:text-darkGray duration-300 flex flex-col justify-center items-center gap-2
 						"
 				>
 					<MdOutlineInsertChart />
@@ -27,7 +27,7 @@ function SideNav() {
 					className="
 							rounded-xl p-1.5 md:p-3 text-base md:text-xl
 							font-semibold text-white hover:bg-primary
-							hover:text-white duration-300 flex flex-col justify-center items-center gap-2
+							hover:text-darkGray duration-300 flex flex-col justify-center items-center gap-2
 						"
 				>
 					<FaPeopleCarry />
@@ -39,7 +39,7 @@ function SideNav() {
 					className="
           rounded-xl p-1.5 md:p-3 text-base md:text-xl
           font-semibold text-white hover:bg-primary
-          hover:text-white duration-300 flex flex-col justify-center items-center gap-2
+          hover:text-darkGray duration-300 flex flex-col justify-center items-center gap-2
 						"
 				>
 					<PiPackageFill />

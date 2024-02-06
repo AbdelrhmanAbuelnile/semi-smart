@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       colors:{
-        "primaryback": "#1E1E1E",
+        "primaryback": "#E7FCFF",
         "secondaryback": "#121212",
-        "primary": "#B8ED55",
-        "secondary": "#B7B7B7",
+        "primary": "#E7FCFF",
+        "secondary": "#06132C",
         "primaryOrange": "#0F1035",
-        "LightGray": "#FAFAFA",
+        "LightBlue": "#2697B0",
         "darkerGray": "#B8B8B8",
         "darkGray": "#6B6B6B",
         "secondaryDarkLead": "#222C3C",
