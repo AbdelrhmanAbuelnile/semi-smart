@@ -9,7 +9,7 @@ function Orders() {
 	const filteredOrders = orders
 		.filter(
 			(order) =>
-				order.fridge_model
+				order.airconditioner_model
 					.toLowerCase()
 					.includes(searchTerm.toLowerCase()) ||
 				order.customerName
@@ -25,17 +25,17 @@ function Orders() {
 			<div className="flex flex-col items-start relative">
 				<input
 					type="text"
-					placeholder="Search by fridge model, customer name, customer id, or location"
+					placeholder="Search by air conditioner model, customer name, order id, location, or order state"
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 					className="w-full lg:w-4/12 p-2 mb-4 border border-LightBlue rounded-md focus:outline-none focus:border-LightBlue bg-transparent text-secondary"
 				/>
 			</div>
 			<div className="w-full rounded-md">
-				<div className="flex flex-row font-semibold bg-secondary text-LightBlue rounded-t-md">
+				<div className="flex flex-row font-semibold bg-secondary text-LightBlue rounded-t-md capitalize">
 					<div className="w-1/6 p-2 text-center">Order ID</div>
 					<div className="w-1/6 p-2 text-center">Customer Name</div>
-					<div className="w-1/6 p-2 text-center">Product</div>
+					<div className="w-1/6 p-2 text-center">Air conditioner</div>
 					<div className="w-1/6 p-2 text-center">Quantity</div>
 					<div className="w-1/6 p-2 text-center">Order State</div>
 					<div className="w-1/6 p-2 text-center">Total Price</div>
@@ -50,7 +50,7 @@ function Orders() {
 					>
 						<div className="w-1/6 p-2 text-center">{order.id}</div>
 						<div className="w-1/6 p-2 text-center">{order.customerName}</div>
-						<div className="w-1/6 p-2 text-center">{order.fridge_model}</div>
+						<div className="w-1/6 p-2 text-center">{order.airconditioner_model}</div>
 						<div className="w-1/6 p-2 text-center">
 							{order.number_of_items}
 						</div>

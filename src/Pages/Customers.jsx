@@ -7,7 +7,7 @@ function Customers() {
 
 	const filteredCustomers = customers.filter(
 		(customer) =>
-			customer.fridge_model.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			customer.airconditioner_model.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			customer.customerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       customer.id.toString().includes(searchTerm.toLowerCase()) ||
       customer.location.toLowerCase().includes(searchTerm.toLowerCase())
@@ -19,17 +19,17 @@ function Customers() {
 				<div className="flex flex-col items-start relative">
 					<input
 						type="text"
-						placeholder="Search by fridge model, customer name, customer id, or location"
+						placeholder="Search by air conditioner model, customer name, customer id, or location"
 						value={searchTerm}
 						onChange={(e) => setSearchTerm(e.target.value)}
 						className="w-full lg:w-4/12 p-2 mb-4 border border-LightBlue rounded-md focus:outline-none focus:border-LightBlue bg-transparent text-secondary"
 					/>
 				</div>
 				<div className="w-full rounded-md">
-					<div className="flex flex-row font-semibold bg-secondary text-LightBlue rounded-t-md">
+					<div className="flex flex-row font-semibold bg-secondary text-LightBlue rounded-t-md capitalize">
 						<div className="w-1/6 p-2 text-center">Customer ID</div>
 						<div className="w-1/6 p-2 text-center">Customer Name</div>
-						<div className="w-1/6 p-2 text-center">Product</div>
+						<div className="w-1/6 p-2 text-center">Air conditioner</div>
 						<div className="w-1/6 p-2 text-center">Quantity</div>
 						<div className="w-1/6 p-2 text-center">Total Price</div>
 						<div className="w-1/6 p-2 text-center">Purchase Date</div>
@@ -44,7 +44,7 @@ function Customers() {
 							<div className="w-1/6 p-2 text-center">{customer.id}</div>
 							<div className="w-1/6 p-2 text-center">{customer.customerName}</div>
 							<div className="w-1/6 p-2 text-center">
-								{customer.fridge_model}
+								{customer.airconditioner_model}
 							</div>
 							<div className="w-1/6 p-2 text-center">
 								{customer.number_of_items}

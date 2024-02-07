@@ -18,7 +18,7 @@ function OrderDetails() {
       </div>
       <div className='flex flex-col justify-center items-start gap-2'>
         <h2 className="text-lg font-semibold mb-2">Order Information</h2>
-        <p>Fridge Model: <span className='text-secondary'>{order.fridge_model}</span></p>
+        <p>air conditioner Model: <span className='text-secondary'>{order.airconditioner_model}</span></p>
         <p>Location: <span className='text-secondary'>{order.location}</span></p>
         <p>Number of Items: <span className='text-secondary'>{order.number_of_items}</span></p>
         <p>Total: <span className='text-secondary'>${order.total}</span></p>
